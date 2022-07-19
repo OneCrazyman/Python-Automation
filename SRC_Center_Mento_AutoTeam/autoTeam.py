@@ -35,6 +35,8 @@ thread = always("child")
 thread.daemon = True
 thread.start()
 
+num_first = 5
+
 # bring_to_window()
 check_y = 23
 move_y = 0
@@ -55,7 +57,9 @@ if img_first:
                 continue    
         # pag.click(img_first.x-15,img_first_y_next)
         i+=1
-        print(i)
+        if(i>=num_first):
+            i=0
+            # img_next = pag.locateCenterOnScreen("./img/box_next.png",confidence=0.9)
         # img_first_y_next += check_y
         # print("click:{0}".format(img_first_y_next))
  
